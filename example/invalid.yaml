@@ -1,0 +1,9 @@
+dimensions:
+  width: 5
+  height: "6 inches"
+name: A green door
+price: "$1"
+tags:
+  - home
+  - green
+  - 5
