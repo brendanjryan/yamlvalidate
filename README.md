@@ -45,7 +45,7 @@ $ .yamlvalidate -s example/schema.json example/valid.yaml example/invalid.yaml
 
 By [extending the JSON Schema](https://json-schema.org/understanding-json-schema/structuring.html) of the Kubernetes API, we are able to write our own typesafe validation pipelines on top of the already powerful OpenAPI spec for all Kubernetes objects. Business domain specific rules can enforce constraints on Kubernetes files, such as resource limits or whitelisted registry domains without needing to migrate all of your kubernetes files from `yaml` to a protocol-buffer based framework like [isopod](https://github.com/cruise-automation/isopod) or [skycfg](https://github.com/stripe/skycfg).
 
-For example: the following rule can be used to check that all [`Quantity`]() declarations use no more than a single (numeric) virtual core. 
+For example: the following rule can be used to check that all [`Quantity`](https://github.com/kubernetes/apimachinery/blob/master/pkg/api/resource/quantity.go) declarations use no more than a single (numeric) virtual core. 
 
 ```json
 {
